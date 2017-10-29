@@ -20,7 +20,8 @@ RUN apt-get update && \
         libtiff-dev \
         libjasper-dev \
         libavformat-dev \
-        libpq-dev
+        libpq-dev \
+        libgtk2.0-dev
 
 # OpenCV
 ENV opencv=3.3.1
@@ -39,6 +40,8 @@ RUN wget https://github.com/opencv/opencv/archive/$opencv.zip \
   -DWITH_TBB=ON \
   -DWITH_EIGEN=ON \
   -DWITH_V4L=ON \
+  -DWITH_GTK=ON \
+  -DWITH_GTK_2_X=ON \
   -DBUILD_TESTS=OFF \
   -DBUILD_PERF_TESTS=OFF \
   -DCMAKE_BUILD_TYPE=RELEASE \
