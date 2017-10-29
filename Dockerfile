@@ -22,12 +22,6 @@ RUN apt-get update && \
         libavformat-dev \
         libpq-dev
 
-# pip
-RUN apt-get install -y python-pip
-
-# Cython
-RUN pip install --no-cache-dir Cython
-
 # OpenCV
 ENV opencv=3.3.1
 WORKDIR /
